@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #555;
+  font-family: Open Sans;
+  font-size: 16px;
+  position: relative;
+  height: 100vh;
+  font-weight: 400;
+}
+header {
+  height: 40vh;
+  text-align: center;
+
+  background-image: url(https://github.com/jonasschmedtmann/complete-javascript-course/blob/master/6-budgety/final/back.png?raw=true);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.main-header {
+  position: absolute;
+  width: 350px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}

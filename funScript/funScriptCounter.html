@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        background-image: url(https://images.unsplash.com/photo-1522567205459-512c087a4eaf?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
+        background-size: cover;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: red;
+      }
+      .mainBox {
+        width: 50%;
+        height: 50%;
+        border-radius: 7px;
+        padding: 3rem;
+        flex: 0 0 70%;
+        background-color: rgb(247, 245, 241);
+        text-align: center;
+        font-size: 6rem;
+        box-shadow: 3px 3px 10px 10px red;
+        font-weight: bold;
+        padding: 1rem;
+        border: 3px solid rgb(182, 138, 138);
+      }
+      .btn {
+        background: red;
+        border-radius: 8pc;
+        font-size: 2rem;
+        padding: 0.5rem;
+        margin: 0.5rem 0.25rem;
+        border: 3px solid orange;
+        box-shadow: 0px 5px black;
+        outline: none;
+      }
+      .btn:hover {
+        background-color: green;
+        color: white;
+      }
+      .btn:active {
+        box-shadow: none;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="mainBox">
+        <div class="box">
+          <p>
+            counter
+          </p>
+        </div>
+        <div class="boxOne box">
+          <div class="displayCounter">
+            2
+          </div>
+        </div>
+        <div class="boxTwo">
+          <button class="lowerCountBtn btn">
+            lower count
+          </button>
+          <button class="addCountBtn btn">
+            add count
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      let displayCounter = document.querySelector(".displayCounter");
+      let lowerCountBtn = document.querySelector(".lowerCountBtn");
+      let addCountBtn = document.querySelector(".addCountBtn");
+      let mainBox = document.querySelector(".mainBox");
+      let count = 0;
+      addCountBtn.addEventListener("click", incrementCounter);
+      function incrementCounter() {
+        count++;
+        displayCounter.innerHTML = count;
+        if (displayCounter.innerHTML > "0") {
+          displayCounter.style.color = "green";
+        } else if (displayCounter.innerHTML === "0") {
+          counter.style.color = "white";
+        }
+        displayCounter.animate([{ opacity: ".2" }, { opacity: "1" }], {
+          duration: 500,
+          fill: "forwards"
+        });
+      }
+      lowerCountBtn.addEventListener("click", decrementCounter);
+      function decrementCounter() {
+        count--;
+        displayCounter.innerHTML = count;
+        if (displayCounter.innerHTML < "0") {
+          displayCounter.style.color = "red";
+        } else if (displayCounter.innerHTML === "0") {
+          counter.style.color = "white";
+        }
+        displayCounter.animate([{ opacity: ".2" }, { opacity: "1" }], {
+          duration: 500,
+          fill: "forwards"
+        });
+      }
+    </script>
+  </body>
+</html>

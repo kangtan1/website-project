@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(43, 40, 40);
+      }
+      .container {
+        letter-spacing: 0.1em;
+      }
+      .form {
+        display: grid;
+      }
+      input {
+        width: 40%;
+        margin: 0 auto;
+        height: 40px;
+        border: none;
+        border-radius: 7px;
+        outline: none;
+        padding: 10px;
+        font-size: 20px;
+      }
+
+      h1 {
+        font-size: 60px;
+        font-weight: normal;
+        padding: 40px 0 30px 0;
+        color: white;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .grams {
+        background-color: rgb(52, 52, 214);
+        height: 80px;
+        width: 40%;
+        margin: 30px auto;
+        border-radius: 7px;
+      }
+      .kilograms {
+        background-color: rgb(49, 116, 52);
+        height: 80px;
+        width: 40%;
+        margin: auto;
+        border-radius: 7px;
+      }
+      .ounces {
+        background-color: rgb(182, 48, 48);
+        height: 80px;
+        width: 40%;
+        margin: 30px auto;
+        border-radius: 7px;
+      }
+      h3 {
+        padding: 15px;
+        color: white;
+        text-transform: capitalize;
+        font-size: 24px;
+        font-weight: lighter;
+      }
+      .display {
+        padding-left: 10px;
+        font-size: 20px;
+        color: white;
+      }
+      #mySelect {
+        width: 40%;
+
+        margin: 0 auto;
+        margin-top: 20px;
+        height: 40px;
+        border: none;
+        border-radius: 7px;
+        outline: none;
+        padding: 10px;
+        font-size: 20px;
+        text-transform: capitalize;
+      }
+      .pounds {
+        background-color: rgb(151, 173, 54);
+        height: 80px;
+        width: 40%;
+        margin: 0 auto;
+        border-radius: 7px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <h1>weight converter</h1>
+        <input type="number" placeholder="Enter Pounds" />
+        <select name="value" id="mySelect">
+          <option value="pounds">pounds</option>
+          <option value="kilograms">kilograms</option>
+          <option value="ounces">ounces</option>
+          <option value="grams">grams</option>
+        </select>
+        <div class="grams">
+          <h3>grams:</h3>
+          <div class="displayGrams display"></div>
+        </div>
+        <div class="kilograms">
+          <h3>kilograms:</h3>
+          <div class="displayKilo display"></div>
+        </div>
+        <div class="ounces">
+          <h3>ounces:</h3>
+          <div class="displayOunces display"></div>
+        </div>
+        <div class="pounds">
+          <h3>pounds:</h3>
+          <div class="displayPounds display"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      //   document.querySelector("input").addEventListener("input", function(e) {
+      //     let pounds = e.target.value;
+
+      //     console.log(pounds);
+      //     document.querySelector(".displayGrams").innerHTML = (
+      //       pounds / 0.0022046
+      //     ).toFixed(2);
+      //     document.querySelector(".displayKilo").innerHTML = (
+      //       pounds / 2.2046
+      //     ).toFixed(2);
+      //     document.querySelector(".displayOunces").innerHTML = pounds * 16;
+      //   });
+      let value = document.getElementById("mySelect");
+      let gramsCal = document.querySelector(".displayGrams");
+      let kiloCal = document.querySelector(".displayKilo");
+      let ouncesCal = document.querySelector(".displayOunces");
+      let poundsCal = document.querySelector(".displayPounds");
+
+      //   value.addEventListener("change", getValue);
+      //   function getValue() {
+      //     let value = this.value;
+      //     console.log(value);
+      //     if (value === "pounds") {
+      //     } else if (value == "kilograms") {
+      //     } else if (value == "ounces") {
+      //     } else if (value == "grams") {
+      //     }
+      //   }
+
+      document.querySelector("input").addEventListener("input", function(e) {
+        let inputVal = e.target.value;
+
+        if ((value = "pounds")) {
+          gramsCal.innerHTML = (inputVal / 0.0022046).toFixed(2) + " g";
+          kiloCal.innerHTML = (inputVal / 2.2046).toFixed(2) + " kg";
+          ouncesCal.innerHTML = inputVal * 16 + " oz";
+          poundsCal.innerHTML = inputVal + " lbs";
+        } else if (value == "kilograms") {
+          gramsCal.innerHTML = (inputVal * 1000).toFixed(2) + " g";
+          kiloCal.innerHTML = inputVal.toFixed(2) + " kg";
+          ouncesCal.innerHTML = (inputVal / 0.02834952).toFixed(2) + " oz";
+          poundsCal.innerHTML = inputVal * 2.2046 + " lbs";
+        } else if (value == "ounces") {
+          gramsCal.innerHTML = (inputVal / 0.035274).toFixed(2) + " g";
+          kiloCal.innerHTML = (inputVal / 35.274).toFixed(2) + " kg";
+          ouncesCal.innerHTML = inputVal + " oz";
+          poundsCal.innerHTML = inputVal / 16 + " lbs";
+        } else if (value == "grams") {
+          gramsCal.innerHTML = inputVal.toFixed(2) + " g";
+          kiloCal.innerHTML = (inputVal / 1000).toFixed(2) + " kg";
+          ouncesCal.innerHTML = inputVal / 28.34952 + " oz";
+          poundsCal.innerHTML = inputVal / 453.59237 + " lbs";
+        }
+      });
+    </script>
+  </body>
+</html>

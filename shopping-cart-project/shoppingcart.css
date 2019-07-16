@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Kaushan Script", cursive;
+  height: 1200px;
+}
+.navbar-header {
+  background-color: lightcoral;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-bottom: 0.3rem solid rgb(248, 151, 87);
+  width: 100%;
+
+  z-index: 2;
+  height: 80px;
+}
+.navbar-header a {
+  color: aliceblue;
+}
+.navbar-header a:hover {
+  font-size: 35px;
+  transition: all 500ms ease;
+  text-shadow: 2px 2px 5px #58544e;
+  text-decoration: none;
+}
+.navbar-links {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 200px;
+}
+.navbar-shopping-cart {
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+a {
+  font-size: 30px;
+  text-decoration: none;
+}
+/* intro section   */
+.explore {
+  padding: 10px;
+  font-size: 1.7em;
+  border-radius: 7px;
+  background-color: transparent;
+  border: 2px solid rgb(209, 177, 49);
+  text-transform: capitalize;
+  font-style: italic;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.intro-brand span {
+  color: palevioletred;
+}
+.intro-brand {
+  font-size: 3.5em;
+
+  opacity: 1 !important;
+  font: bold;
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+}
+.intro {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  align-items: center;
+
+  /* opacity: 0.7; */
+  font-style: italic;
+}
+.image-cover {
+  min-height: calc(100vh - 76px);
+  background: linear-gradient(var(--yellowTrans), var(--yellowTrans)),
+    url(./img/headerBcg.jpeg) center/cover fixed no-repeat;
+  position: relative;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+/* create main boxabout us */
+.main-box {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 0 2rem 0;
+  width: 70%;
+  margin: 0 auto;
+}
+.box-one {
+}
+.sub-box {
+}
+.banner-p {
+  margin: 25px 0 20px 0;
+}
+.banner {
+  font-size: 2em;
+  font-style: italic;
+}
+.banner span {
+  color: lightcoral;
+  font-size: 1.3em;
+}
+.box-two {
+  width: 100%;
+  margin-left: 10em;
+  padding: 0px;
+}
+.img-box {
+  border: 0.6em solid red;
+  padding: 0;
+  margin: 0;
+}
+.sweet-one {
+  width: 33rem;
+}
+.explore-btn {
+  padding: 10px;
+  font-size: 1.2em;
+  border-radius: 7px;
+  background-color: transparent;
+  border: 1px solid rgb(29, 26, 13);
+  text-transform: capitalize;
+  font-style: italic;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+#sweet-container {
+  background: #bdb4a7;
+}
+/* button of the sweet item  */
+.sweet-intro {
+  text-align: center;
+}
+.main-btn {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.btn-sweet {
+  margin: 1em;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  color: black;
+}
+.btn-sweet a {
+  color: black;
+}
+/* create search bar */
+.main-search {
+  display: flex;
+  justify-content: center;
+}
+.search-bar {
+  padding: 10px;
+  width: 20%;
+  font-style: italic;
+  color: #58544e;
+  font-weight: bolder;
+  margin: 0;
+  border: 1px solid lightslategrey;
+  border-radius: 5px;
+}
+.fa-search {
+  background-color: #fea9a8;
+  padding: 0.7em;
+  margin: 0;
+
+  justify-self: end;
+}
+
+/* sweet section  */
+.sweet-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  z-index: 2;
+}
+.sweet {
+  justify-content: center;
+  background-color: white;
+  margin: 1em;
+  border-radius: 5px;
+}
+.sweet:hover {
+}
+.item {
+  width: 20em;
+  z-index: 1;
+  border-radius: 5px;
+}
+.item-intro {
+  padding: 10px 15px 25px 20px;
+  font-size: 1.3em;
+  font-weight: 400;
+  background: white;
+  border-radius: 5px;
+}
+.item-intro span {
+  float: right;
+  font-weight: 600;
+}
+.sweet-box {
+  background: white;
+}
+.item:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+@media only screen and (max-width: 480px) {
+  .navbar-header.scrolled {
+    background: rgb(241, 176, 55);
+    transition: background 1s;
+  }
+  .navbar-brand {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .change .bar1 {
+    transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  .change .bar2 {
+    opacity: 0;
+  }
+  .change .bar3 {
+    transform: rotate(45deg) translate(-7px, -9px);
+  }
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 30px;
+    height: 5px;
+    margin: 0.5rem;
+    background-color: rgb(228, 214, 205);
+    transition: all 2s ease;
+  }
+  .navbar-btn {
+    align-self: center;
+    border: 5px solid rgb(228, 214, 205);
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .navbar-links-2 {
+    display: none;
+    z-index: 2;
+    list-style: none;
+    transition: all 2s ease !important;
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    top: 80px;
+  }
+  .navbar-links-2 a {
+    color: aliceblue;
+  }
+
+  .navbar-hidden {
+    height: 300px;
+    transition: all 2s ease;
+    transition: height 350ms ease-in-out, opacity 750ms ease-in-out !important;
+  }
+  .navbar-single-link {
+    background: rgb(218, 176, 114);
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(221, 187, 125);
+    transition: all 1s ease;
+    cursor: point;
+  }
+  .navbar-single-link:hover {
+    padding-left: 1.5rem;
+    background: lightcoral;
+  }
+  .navbar-links {
+    display: none;
+  }
+  .navbar-shopping-cart {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1030px) {
+  .navbar-links-2 {
+    display: none;
+  }
+  .navbar-single-link {
+    display: none;
+  }
+}

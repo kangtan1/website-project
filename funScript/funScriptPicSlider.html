@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(https://images.unsplash.com/photo-1557941760-987c3f403d5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=684&q=80);
+        background-size: cover;
+      }
+      .container {
+        flex: 0 0 80%;
+        min-height: 70vh;
+        background-image: url(background.jpg);
+        background-position: center;
+        background-size: cover;
+        border-radius: 15px;
+        box-shadow: 5px 10px black;
+        position: relative;
+      }
+      .btn {
+        display: inline-block;
+        background: white;
+        color: black;
+        border: 3px solid green;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        border-radius: 7px;
+        box-shadow: 2px 5px black;
+        outline: none;
+      }
+      .prevBtn {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+      }
+      .nextBtn {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(50%, -50%);
+      }
+      .btn:active {
+        background: grey;
+        box-shadow: 1px 1px grey;
+      }
+      .btn:hover {
+        background: green;
+        color: white;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image">
+        <button type="button" class="btn prevBtn">
+          Prev Btn
+        </button>
+        <button type="button" class="btn nextBtn">
+          Next Btn
+        </button>
+      </div>
+    </div>
+    <script>
+      const nextBtn = document.querySelector(".nextBtn");
+      const prevBtn = document.querySelector(".prevBtn");
+      const container = document.querySelector(".image");
+      let arr = [
+        "image-1.jpg",
+        "image-2.jpg",
+        "image-3.jpg",
+        "image-4.jpg",
+        "image-5.jpg"
+      ];
+      let counter = 1;
+      nextBtn.addEventListener("click", nextSlide);
+      prevBtn.addEventListener("click", prevSlide);
+      function nextSlide() {
+        if (counter === arr.length) {
+          counter = 0;
+        }
+        counter++;
+        let test = (container.style.backgroundImage = `url(arr[${counter}])`);
+        console.log(test);
+      }
+      function prevSlide() {
+        if (counter === 0) {
+          counter = 5;
+        }
+        counter++;
+        container.style.backgroundImage = `url(image-${counter}.jpg)`;
+      }
+    </script>
+  </body>
+</html>

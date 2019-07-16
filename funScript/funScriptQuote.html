@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: orange;
+        text-transform: capitalize;
+        font-size: 2em;
+        text-align: center;
+      }
+      .box {
+        background-color: aliceblue;
+        text-align: center;
+        padding: 3rem;
+        border-radius: 7px;
+        flex: 0 0 80%;
+      }
+      .clickBtn {
+        color: rgb(179, 32, 32);
+        border: 3px solid rgb(179, 32, 32);
+        border-radius: 7px;
+        outline: none;
+        font-size: 20px;
+        padding: 10px;
+        background: white;
+      }
+      .boxOne,
+      .boxTwo,
+      .boxThree {
+        padding-bottom: 20px;
+      }
+      .boxThree {
+        background-color: azure;
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="boxOne">
+          <h2>quotes by famous people</h2>
+        </div>
+        <div class="boxTwo">
+          <button class="clickBtn">
+            Press to display a quote
+          </button>
+        </div>
+        <div class="boxThree">
+          <div class="quoteContainer">
+            <p class="displayQuote"></p>
+          </div>
+        </div>
+
+        <div class="authorContainer">
+          <p class="displayAuthor"></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      let quoteAuthor = document.querySelector(".displayAuthor");
+      let quoteText = document.querySelector(".displayQuote");
+      let quotes = [
+        {
+          name: "John Keats",
+          quote:
+            "I love you the more in that I believe you had liked me for my own sake and for nothing else."
+        },
+        {
+          name: "J. R. R. Tolkien",
+          quote: "Not all those who wander are lost."
+        },
+        {
+          name: "George Sand",
+          quote:
+            "There is only one happiness in this life, to love and be loved."
+        },
+        {
+          name: "Mark Twain",
+          quote: "The secret of getting ahead is getting started."
+        },
+        {
+          name: "Robert H. Schuller",
+          quote: "Problems are not stop signs, they are guidelines."
+        },
+        {
+          name: "Friedrich Nietzsche",
+          quote:
+            "We love life, not because we are used to living but because we are used to loving."
+        },
+
+        {
+          name: "George Bernard Shaw",
+          quote:
+            "Life isn't about finding yourself. Life is about creating yourself."
+        },
+        {
+          name: "Socrates",
+          quote: "The only true wisdom is in knowing you know nothing."
+        },
+        {
+          name: "Helen Keller",
+          quote:
+            "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart."
+        }
+      ];
+      document
+        .querySelector(".clickBtn")
+        .addEventListener("click", randomClick);
+      function randomClick() {
+        let quote = "";
+
+        let random = Math.floor(Math.random() * quotes.length);
+        quote += quotes[random];
+        quoteAuthor.innerHTML = quotes[random].name;
+        quoteText.innerHTML = quotes[random].quote;
+      }
+    </script>
+  </body>
+</html>

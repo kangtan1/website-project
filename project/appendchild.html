@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="myList">
+        what fruit do you like today?
+        <li>banana</li>
+    </ul>
+    <script>
+        const myList = document.getElementById("myList");
+        /*let newListItem = document.createElement("li");
+        newListItem.textContent = "apple";
+        myList.appendChild(newListItem);*/
+        const fruitList = ["apple", "pearl", "orange", "watermelon", "cucumber", "lemon"];
+        for (let fruit of fruitList) {
+            let newListItem = document.createElement('li');
+            newListItem.textContent = fruit;
+            myList.appendChild(newListItem);
+        }
+    </script>
+</body>
+</html>

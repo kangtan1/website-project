@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      .container {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 4em;
+        background-color: black;
+        color: white;
+      }
+      .mainBox {
+        background-color: orange;
+        border-radius: 7px;
+        padding: 20px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="mainBox">
+        <span class="hr">hr</span>
+        <span class="space">:</span>
+        <span class="min">min</span>
+        <span class="space">:</span>
+        <span class="sec">sec</span>
+        <span class="session"></span>
+      </div>
+    </div>
+    <script>
+      let h = document.querySelector(".hr");
+      let m = document.querySelector(".min");
+      let s = document.querySelector(".sec");
+      let time = document.querySelector(".session");
+
+      let session = "pm";
+      function showTime() {
+        let dt = new Date();
+        let hr = dt.getHours();
+        let min = dt.getMinutes();
+        let sec = dt.getSeconds();
+        if (hr > 12) {
+          time.innerHTML = session;
+          hr = hr - 12;
+        }
+        if (hr == 0) {
+          hr = 12;
+        }
+
+        h.innerHTML = hr;
+        m.innerHTML = min;
+        s.innerHTML = sec;
+        setTimeout(showTime, 500);
+      }
+      showTime();
+    </script>
+  </body>
+</html>

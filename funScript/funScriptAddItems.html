@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      .container {
+        margin: 0 auto;
+        width: 60%;
+      }
+      .btn {
+        padding: 10px;
+        background-color: aquamarine;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        font-size: 1.1em;
+        margin-left: 20px;
+      }
+      .btn:hover {
+        background-color: rgb(25, 206, 146);
+        border: 2px solid rgb(4, 133, 101);
+        padding: 12px;
+        transition: ease-out 200ms;
+      }
+      .active {
+        background-color: rgb(25, 206, 146);
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">click a list item to replace this text</h1>
+
+      <button class="btn">add new item</button>
+      <ul id="listItems">
+        <li>first item</li>
+        <li>second item</li>
+        <li>third item</li>
+        <li>fourth item</li>
+        <li>fifth item</li>
+      </ul>
+    </div>
+    <script>
+      let newItemCounter = 0;
+      let list = document.querySelector("#listItems");
+      let title = document.querySelector(".title");
+      let listItems = document.querySelectorAll("li");
+      let btn = document.querySelector(".btn");
+
+      list.addEventListener("click", activateItem);
+
+      function activateItem(e) {
+        if (e.target.nodeName == "LI") {
+          title.innerHTML = e.target.innerHTML;
+
+          for (let i = 0; i < e.target.parentNode.children.length; i++) {
+            e.target.parentNode.children[i].classList.remove("active");
+          }
+          e.target.classList.add("active");
+        }
+      }
+      btn.addEventListener("click", createNewItem);
+      function createNewItem() {
+        list.innerHTML += "<li> something new " + newItemCounter + " </li>";
+        newItemCounter++;
+      }
+    </script>
+  </body>
+</html>

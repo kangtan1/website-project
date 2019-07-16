@@ -1,0 +1,92 @@
+body, html{
+	font-family: "Times New Roman", Times, serif; 
+	background-image: radial-gradient(circle, #395c9d, #7550a0, #aa398b, #cd1c62, #d62a2a);
+	margin-bottom: 50px;
+}
+#main{
+	text-align: center;
+}
+#title{
+
+	font-size: 64px;
+	font-weight: bold;
+}
+#description{
+	font-size: 24px;
+}
+#outer-form{
+	background-color: #DC7F7F;
+	width: 75%;
+	margin: 0 auto 0 auto;
+	border-radius: 10px;
+	padding:30px 0 40px 0;
+}
+.rowtab{
+	display: block;
+}
+.label{
+	display: inline-block;
+	text-align: right;
+	width: 40%;
+	vertical-align: top;
+	margin-top: 15px;
+	font-size: 20px;
+}
+.righttab{
+	display: inline-block;
+	width: 48%;
+	vertical-align: middle;
+	text-align: left;
+	font-size: 18px;
+}
+li{
+	list-style: none;
+}
+ul{
+	padding-left: 0;
+}
+.input-field{
+  height: 20px;
+  width: 280px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 5px;
+}
+#dropdown{
+	padding: 5px;
+  	margin: 10px;
+  	border: 1px solid #c0c0c0;
+  	border-radius: 5px;
+  	width: 150px;
+}
+.text-box{
+	width: 280px;
+	height: 80px;
+	border-radius: 5px;
+	padding: 5px;
+  	margin: 10px;
+  	border: 1px solid #c0c0c0;
+  	resize: both;
+  	overflow: auto;
+}
+li, .userrating{
+	margin-top: 10px;
+} 
+.user{
+	margin-top: 12px;
+}
+#submit{
+	width: 100px;
+    height: 40px;
+    color: black;
+    background-image: radial-gradient(circle, #395c9d, #7550a0, #aa398b, #cd1c62, #d62a2a);
+    font-weight: bold;
+    font-size: 14px;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+}
+#submit:hover {
+	 
+	background-image: radial-gradient(circle, #d62a2a, #cd1c62, #aa398b, #7550a0, #395c9d);
+}

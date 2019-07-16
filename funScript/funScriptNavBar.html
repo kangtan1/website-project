@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .navbar-header {
+        background-color: lightcoral;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+        border-bottom: 0.3rem solid rgb(248, 151, 87);
+      }
+      .navbar-btn {
+        align-self: center;
+        border: 5px solid rgb(194, 169, 115);
+        cursor: pointer;
+        border-radius: 10px;
+      }
+      img {
+        width: 80px;
+        height: 80px;
+        padding: 10px;
+        border-radius: 15px;
+      }
+
+      .bar1,
+      .bar2,
+      .bar3 {
+        width: 30px;
+        height: 5px;
+        margin: 0.5rem;
+        background-color: rgb(221, 187, 125);
+        transition: all 2s ease;
+      }
+      .change .bar1 {
+        transform: rotate(-45deg) translate(-10px, 10px);
+      }
+      .change .bar2 {
+        opacity: 0;
+      }
+      .change .bar3 {
+        transform: rotate(45deg) translate(-7px, -9px);
+      }
+      .navbar-links {
+        list-style: none;
+        transition: all 2s ease;
+
+        height: 0;
+        overflow: hidden;
+      }
+      .navbar-hidden {
+        height: 240px;
+      }
+      .navbar-single-link {
+        display: block;
+        background: rgb(167, 109, 86);
+        padding: 1rem;
+        font-size: 1.5rem;
+        text-decoration: none;
+        text-transform: capitalize;
+        color: rgb(221, 187, 125);
+        transition: all 1s ease;
+        cursor: point;
+      }
+      .navbar-single-link:hover {
+        padding-left: 1.5rem;
+        background: lightcoral;
+      }
+      header {
+        min-height: calc(100vh - 91.8px);
+        background-image: url(https://images.unsplash.com/photo-1556480435-b7b37fd635d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1778&q=80);
+        background-position: center;
+        background-size: cover;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-header">
+        <img
+          src="https://about.canva.com/wp-content/uploads/sites/3/2016/08/Beauty-Logo.png"
+          alt="logo"
+        />
+        <div class="navbar-btn">
+          <div class="bar1 bar"></div>
+          <div class="bar2 bar"></div>
+          <div class="bar3 bar"></div>
+        </div>
+      </div>
+      <ul class="navbar-links ">
+        <li class="navbar-single-link "><i class="fas fa-home"></i> home</li>
+        <li class="navbar-single-link "><i class="fab fa-html5"></i> html</li>
+        <li class="navbar-single-link "><i class="fab fa-css3-alt"></i> css</li>
+        <li class="navbar-single-link ">
+          <i class="fab fa-js-square"></i> javascript
+        </li>
+      </ul>
+    </div>
+    <header class="container"></header>
+    <script>
+      const navbarBtn = document.querySelector(".navbar-btn");
+      const navbarLinks = document.querySelector(".navbar-links");
+
+      navbarBtn.addEventListener("click", function() {
+        let value = navbarLinks.classList.contains("navbar-hidden");
+        if (value) {
+          navbarLinks.classList.remove("navbar-hidden");
+          navbarBtn.classList.remove("change");
+        } else {
+          navbarLinks.classList.add("navbar-hidden");
+          navbarBtn.classList.add("change");
+        }
+      });
+    </script>
+  </body>
+</html>

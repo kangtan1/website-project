@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="navbar.css" />
+    <title>Bubble Effect</title>
+  </head>
+
+  <body>
+    <nav>
+      <div class="brand">
+        <h1>brands</h1>
+      </div>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Projects</a></li>
+      </ul>
+    </nav>
+
+    <script src="navbar.js">
+      const hamburger = document.querySelector("hamburger");
+          const navLinks = document.querySelector(".nav-links");
+          const links = document.querySelectorAll("'nav-links li");
+
+          hamburger.addEventListener("click", () => {
+              navLinks.classList.toggle("open");
+              links.forEach(link => {
+                  link.classList.toggle("fade");
+              });
+          });
+          alert("connected");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="budgetApp.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="main-header">
+        <h4>Available Budget in %Month%:</h4>
+        <div class="display" id="display">+2345.64</div>
+        <div class="display-1" id="display-1">
+          income<span id="displayIncome">+ 23423</span>
+        </div>
+        <div class="display-2" id="display-2">
+          expenses
+          <span id="displayExpenses">-123</span>
+          <span id="spendPercentage"></span>
+        </div>
+      </div>
+    </header>
+    <div>
+      <form action="">
+        <select name="value" id="value">
+          <option value="positive">+</option>
+          <option value="positive">-</option>
+        </select>
+        <input type="text" placeholder="Add description" />
+        <input type="text" placeholder="value" />
+        <button class="enter" id="enter"><i class="fas fa-check"></i></button>
+      </form>
+    </div>
+    <div>
+      <div class="form" id="income">
+        <h1>income</h1>
+      </div>
+      <div class="form" id="expenses">
+        <h1>expenses</h1>
+      </div>
+    </div>
+    <script src="budgetApp.js"></script>
+  </body>
+</html>

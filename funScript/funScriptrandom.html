@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-transform: capitalize;
+        font-size: 3rem;
+        font-weight: bolder;
+        text-align: center;
+      }
+
+      .clickBtn {
+        color: rgb(179, 32, 32);
+        border: 3px solid rgb(179, 32, 32);
+        border-radius: 7px;
+        outline: none;
+        font-size: 20px;
+        padding: 10px;
+        background: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p class="text"></p>
+      <button class="clickBtn">press here to change color</button>
+    </div>
+
+    <script>
+      const hexNumbers = [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ];
+      let text = document.querySelector(".text");
+      document
+        .querySelector(".clickBtn")
+        .addEventListener("click", colorChange);
+      let body = document.querySelector("body");
+      function colorChange() {
+        let hexCol = "#";
+        for (let i = 0; i < 6; i++) {
+          let random = Math.floor(Math.random() * hexNumbers.length);
+          hexCol += hexNumbers[random];
+        }
+
+        body.style.backgroundColor = hexCol;
+        text.innerHTML = "this hex color code is :" + "<br>" + hexCol;
+      }
+    </script>
+  </body>
+</html>

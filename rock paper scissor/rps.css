@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Asap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: asap, sams-serif;
+    background-color: #24272E;
+}
+header{
+ 
+    padding: 20px;
+    background-color:red;
+}
+header h3{
+    text-align: center;
+    font-size: 30;
+    font-weight: bolder;
+}
+.score-board {
+    border: 1px solid white;
+    text-align: center;
+    width: 200px;
+    font-size: 46px;
+    color: white;
+    margin: 20px auto;
+    border-radius: 2px;
+    position: relative;
+    padding: 10px 0;
+}
+.badge{
+    font-size: 14px;
+    padding: 2px 4px;
+    background: #E2584D;
+}
+#user-label{
+    position: absolute;
+    top: 25px;
+    left: -15px;
+}
+#computer-label{
+    position: absolute;
+    top: 25px;
+    right: -20px;
+}
+.result{
+
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+
+}
+.choices{
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+}
+.choice{
+    display: inline-block;
+    padding: 30px;
+    color: white;
+    font-size: 100px;
+    border-radius: 50px;
+    border: 3px solid #E2584D;
+    margin: 0 10px;
+    transition: all .3s ease;
+}
+.game{
+    text-align: center;
+    color: aliceblue;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.choice:hover{
+    cursor: pointer;
+    background: rgb(44, 50, 65);
+}
+.green-glow{
+    border: 4px solid #4dcc7d;
+    box-shadow: 0 0 10px #31b43a;
+}
+red-glow{
+    border: 4px solid hsl(9, 71%, 60%);
+    box-shadow: 0 0 10px #c7260a;
+}
+grey-glow{
+    border: 4px solid #b4c3ce;
+    box-shadow: 0 0 10px #272829;
+}
